@@ -1,0 +1,941 @@
+<style data-inline="true">
+body{margin:0 auto;padding:0;}
+img{display:block;overflow:hidden;}
+.allstyle{
+	width:750px;
+	font-family:'黑体';
+	font-size:12px;
+	margin:0 auto;
+	color:#555;
+	overflow:hidden;
+}
+.screenshot{
+	width:750px;
+	font-family:'黑体';
+	font-size:12px;
+	color:#555;
+	overflow:hidden;
+}
+.section{
+	width:750px;
+	font-family:黑体;
+	font-size:12px;
+	color:#555;
+	overflow:hidden;
+}
+.fl{float:left;}
+.tac{text-align:center;}
+.vat{vertical-align:top;}
+.vam{vertical-align:middle;}
+.dib{display:inline-block;}
+.ofh{overflow:hidden;}
+.fs0{font-size:0;}
+.fs12{font-size:12px;}
+.fs14{font-size:14px;}
+.fs16{font-size:16px;}
+.fs18{font-size:18px;}
+.fs20{font-size:20px;}
+.c000{color:#000;}
+.c302b30{color:#302b30;}
+.c1e1c1e{color:#1e1c1e;}
+.ffpfz{font-family:'苹方 中等';}
+.ff_syl{font-family:'Noto Sans S Chinese Light';}
+.ff_syr{font-family:'苹方 中等';}
+.ff_sym{font-family:'苹方 中等';}
+.imgbor img{border-radius: 50%;}
+.imgb img{border: 5px solid #e5e5e5;}
+.zhishu table{
+	width:428px;
+	border-collapse:collapse;
+}
+.zhishu tr td{
+	padding:0;
+	width:107px;
+	height:30px;
+	color:#201513;
+	font-size:18px;
+	text-align:center;
+}
+.zhishu tr:first-child td{
+	height:5px;
+}
+.zhishu tr td span{
+	display:block;
+	line-height:1;
+	font-family:'苹方 中等';
+}
+.zhishu .curr{
+	color:#fefefe;
+	background-color:#373737;
+}
+#sizeTable table{
+	width:100%;
+	text-align:center;
+	border-collapse:collapse;
+}
+#sizeTable tr td{
+	padding:0;
+	width:72px;
+	height:40px;
+	color:#201513;
+	font-size:22px;
+	background-color: #f5f5f5;
+	border-top:1px solid #fff;
+	font-family:'苹方 常规';
+}
+#sizeTable tr:first-child td{
+	font-size:17px;
+	font-family:'苹方 粗体';
+}
+.heise{background-color:#000;}
+.shenhui{background-color:#555;}
+.zhonghui{background-color:#999;}
+.qianhui{background-color:#bbb;}
+.mibai{background-color:#f9f9f9;}
+.baise{background-color:#fff;border:1px solid #bcbcbc;}
+.jiuhong{background-color:#990000;}
+.dahong{background-color:#dd0000;}
+.meihong{background-color:#ff0066;}
+.juhong{background-color:#ff6633;}
+.xiguahong{background-color:#ff6666;}
+.fenhong{background-color:#ffcccc;}
+.molv{background-color:#003300;}
+.junlv{background-color:#414600;}
+.lvse{background-color:#006600;}
+.caolv{background-color:#009900;}
+.qinglv{background-color:#00a078;}
+.huanglv{background-color:#ddff00;}
+.qianlv{background-color:#ccffcc;}
+.zangqing{background-color:#000066;}
+.shenlan{background-color:#000099;}
+.lanse{background-color:#0066cc;}
+.tianlan{background-color:#3399ff;}
+.qianlan{background-color:#99ccff;}
+.shenzi{background-color:#663399;}
+.zihong{background-color:#ff00ff;}
+.zise{background-color:#cc66ff;}
+.danzi{background-color:#cc99ff;}
+.hese{background-color:#663300;}
+.zongse{background-color:#996633;}
+.tuhuang{background-color:#cc9933;}
+.kaqi{background-color:#cc9966;}
+.chenghuang{background-color:#ff9900;}
+.jiagnhuang{background-color:#ffcc00;}
+.lianghuang{background-color:#ffff00;}
+.qianhuang{background-color:#ffff99;}
+</style>
+<div class="allstyle">
+	<!-- 产品图 -->
+	<div data-title="产品图" class="allstyle _eo">
+		<div data-sub-title="海报图" class="allstyle _eo">
+			<div class="screenshot _eo" style="position: relative;">
+				<div style="margin-top: 25px;">
+					<#if root.trade.name?contains("套装") || root.trade.name?contains("连衣裙")>
+						<#if (pictures.get('SHOW')?size > 0)>
+						<img data-type="image" id="showImg1" />
+						<label class="_t" data-target="pictures" data-element="{'selector':['is(\'SHOW\')'],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'150,-1,20,-1','width':750,'height':'1100','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'1100'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#showImg1','attrs':{'src':'path'}}}]"></label>
+						<#else>
+						<img data-type="image" id="showImg1_1" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'150,-1,20,-1','width':750,'height':'1100','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'1100'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#showImg1_1','attrs':{'src':'path'}}}]"></label>
+						</#if>
+					<#else>
+						<#if (pictures.get('SHOW')?size > 0)>
+						<img data-type="image" id="showImg1_1_1" />
+						<label class="_t" data-target="pictures" data-element="{'selector':['is(\'SHOW\')'],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'150,-1,20,-1','width':750,'height':'1100','maxCut':'0.28,0,0.28,0','upper':',pelvis-15:thorax','lower':'knee-25:pelvis,'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'1100'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#showImg1_1_1','attrs':{'src':'path'}}}]"></label>
+						<#else>
+						<img data-type="image" id="showImg1_2_1" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'lower\')','match(\'body_part\',\'upper\')',''],['match(\'body_orientation2\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'150,-1,20,-1','width':750,'height':'1100','maxCut':'0.28,0,0.28,0','upper':',pelvis-15:thorax','lower':'knee-25:pelvis,'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'1100'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#showImg1_2_1','attrs':{'src':'path'}}}]"></label>
+						</#if>
+					</#if>
+				</div>
+				<div style="position: absolute;top: 80px;left: 110px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x1.png" />
+				</div>
+				<div style="position: absolute;top: 1005px;left: 10px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x63.png" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 产品图 -->
+	<!-- 尺寸及试穿 -->
+	<div data-title="尺寸及试穿" class="allstyle _eo">
+		<div class="screenshot section _eo">
+			<div class="_eo">
+				<div style="margin-top:40px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x64.png" width="100%" />
+				</div>
+				<div id="sizeTable" class="_t _eo _first_match" style="margin-top: 15px;width: 100%">
+					<label id="sizeTables" class="_t_d" data-element="{'selector':'fieldValues[field.is(BUSINESS_TYPE, SIZE_TABLE)=true]'}"></label>
+					<div class="_t _eo" style="margin-bottom: 50px;">
+						<label class="_t" data-target="sizeTables" data-command="[{'scope':'PRODUCT_FIELD','command':'TABLE','parameters':{'name':'SIZE','removeEmptyColumns':'true'}}]"></label>
+					</div>
+				</div>
+				<div class="fs0 tac _eo" style="margin: -25px 0 50px;width: 100%">
+					<div class="dib vam _eo">
+						<img data-type="image" id="measureInstructionImage" />
+						<label class="_t" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'code':'MEASURE_INSTRUCTION','itemCode':'SCHEMATIC','templateId':'%{templateId}','by':'TRADE'}},{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':'235'}},{'scope':'COMMON','command':'APPLY_TO','parameters':{'selector':'#measureInstructionImage','attrs':{'src':'value'}}}]"></label>
+					</div>
+					<#if (pictures.get('OTHER')?size > 0)>
+					<div class="dib vam fs0 tac _t _first_match _fixed_size _eo _oa" style="margin-left: 50px;width: 370px;" data-space="other0">
+						<label id="modelIds" class="_t_d" data-element="{'selector':'{{%{modelIds}}}','count':1}"></label>
+						<label class="_t_d" id="modelIds1" data-element="{'selector':'pictures.?[is(\'OTHER\')]'}"></label>
+						<div class="_t">
+							<div class="dib vam ofh" style="width: 167px;">
+								<div class="fl">
+									<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x20.png" />
+								</div>
+								<div class="fl imgbor" style="margin: -161px 0 0 6px;">
+									<img data-type="image" id="otherImg2_${groupIndex}" />
+								</div>
+							</div>
+							<div class="dib vam fs0" style="margin-left:13px;min-width:100px;max-width:167px;text-align:left">
+								<span data-type="text" class="ff_sym fs16" style="color: #201513;margin-left:21px">Model：<label class="_t" data-target="modelIds" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'templateId':'%{templateId}','code':'MODEL','itemCode':'NAME','id':'!{object}'}}]"></label></span><br />
+								<span data-type="text" class="ffpfz fs16 c1e1c1e" style="line-height: 28px;margin-left:11px">HEIGHT：<label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'templateId':'%{templateId}','code':'MODEL','itemCode':'HEIGHT','id':'!{object}'}}]"></label>CM</span><br />
+								<span data-type="text" class="ffpfz fs16 c1e1c1e" style="line-height: 28px;margin-left:32px">BWH：<label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'templateId':'%{templateId}','code':'MODEL','itemCode':'BUST','id':'!{object}'}}]"></label>/<label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'templateId':'%{templateId}','code':'MODEL','itemCode':'WAIST','id':'!{object}'}}]"></label>/<label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'templateId':'%{templateId}','code':'MODEL','itemCode':'HIPLINE','id':'!{object}'}}]"></label></span><br />
+								<span data-type="text" class="ffpfz fs16 c1e1c1e" style="line-height: 28px;margin-left:4px">
+									<span data-type="text" class="vam">TRY SIZE： </span>
+									<span data-type="text" class="dib vam tac ofh" style="width: 20px;height: 20px;border-radius: 50%;background-color: #e7d4d4;line-height: 20px;"><label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'templateId':'%{templateId}','code':'MODEL','itemCode':'TRYSIZE','id':'!{object}'}}]"></label></span>
+								</span>
+								<label class="_t" data-target="modelIds1" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,0,-1','width':155,'height':'155','maxCut':'0,0,0.45,0','lower':'pelvis','direction':'BOTTOM'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':'155','height':'155','by':'SHORT_SIDE'}},{'scope':'PRODUCT_IMAGE','command':'CUT','parameters':{'shape':'RECTANGLE','width':'155','height':'155'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#otherImg2_${groupIndex}','attrs':{'src':'path'}}}]"></label>
+							</div>
+						</div>
+					</div>
+					<#else>
+					<div class="dib vam tac _t _first_match _fixed_size _eo _oa" style="margin-left: 50px;width: 370px;" data-space="other0">
+						<label id="modelIds2" class="_t_d" data-element="{'selector':'{{%{modelIds}}}','count':1}"></label>
+						<div class="_t">
+							<div class="dib vam ofh" style="width: 167px;">
+								<div class="fl">
+									<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x20.png" />
+								</div>
+								<div class="fl imgbor" style="margin: -161px 0 0 6px;">
+									<img id="modelInfoImg_${groupIndex}" data-type="image" />
+									<label class="_t" data-target="modelIds2" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'templateId':'%{templateId}','code':'MODEL','itemCode':'HEAD','id':'!{object}'}},{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':'155'}},{'scope':'PRODUCT_IMAGE','command':'CUT','parameters':{ 'shape':'RECTANGLE','width':'155','height':'155','perspective':'GLOBAL'}},{'scope':'COMMON','command':'APPLY_TO','parameters':{'selector':'#modelInfoImg_${groupIndex}','attrs':{'src':'value'}}}]"></label>
+								</div>
+							</div>
+							<div class="dib vam fs0" style="margin-left:13px;min-width: 100px;max-width: 167px;text-align: left;">
+								<span data-type="text" class="ff_sym fs16" style="color: #201513;margin-left:21px">Model：<label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'templateId':'%{templateId}','code':'MODEL','itemCode':'NAME','id':'!{object}'}}]"></label></span><br />
+								<span data-type="text" class="ffpfz fs16 c1e1c1e" style="line-height: 28px;margin-left:11px">HEIGHT：
+									<label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'templateId':'%{templateId}','code':'MODEL','itemCode':'HEIGHT','id':'!{object}'}}]"></label>
+								CM</span><br />
+								<span data-type="text" class="ffpfz fs16 c1e1c1e" style="line-height: 28px;margin-left:32px">BWH：<label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'templateId':'%{templateId}','code':'MODEL','itemCode':'BUST','id':'!{object}'}}]"></label>/<label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'templateId':'%{templateId}','code':'MODEL','itemCode':'WAIST','id':'!{object}'}}]"></label>/<label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'templateId':'%{templateId}','code':'MODEL','itemCode':'HIPLINE','id':'!{object}'}}]"></label></span><br />
+								<span data-type="text" class="ffpfz fs16 c1e1c1e" style="line-height:28px;margin-left:4px">
+									<span data-type="text" class="vam">TRY SIZE： </span>
+									<span data-type="text" class="dib vam tac ofh" style="width: 20px;height: 20px;border-radius: 50%;background-color: #e7d4d4;line-height: 20px;"><label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT','command':'TEMPLATE_RESOURCE','parameters':{'templateId':'%{templateId}','code':'MODEL','itemCode':'TRYSIZE','id':'!{object}'}}]"></label></span>
+								</span>
+							</div>
+						</div>
+					</div>
+					</#if>
+				</div>
+				<div class="tac" style="margin: -20px 0 0 15px;width: 100%;">
+					<span data-type="text" style="font-family:'苹方 常规';font-size: 14px;color: #201513;">Tips：The manual measurement error of 1-2cm,Please forgive.</span>
+				</div>
+				<div class="tac" style="width:87.068%;margin:10px auto 6.66667%;background-color:#c6b3b3;">
+					<span style="font-family:'苹方 粗体';font-size:16px;color:#fff;line-height:35px">Please select the appropriate size according to the wearing effect you want</span>
+				</div>
+			</div>
+			<div class="_eo">
+				<div>
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x65.png" width="100%" />
+				</div>
+				<div class="_eo fs0 tac" style="margin-top:21px;">
+					<div class="zhishu fs0 _eo dib" style="margin-top: 20px;">
+						<div class="dib vat" style="width:105px;text-align:right;">
+							<span data-type="text" class="ff_syr" style="font-size: 21px;color: #231815;line-height: 1;">Elasticity:</span>
+						</div>
+						<div class="dib vat" style="margin: 10px 0 0 10px;">
+							<table cellpadding="0" cellspacing="0" border="0" data-zhishu-type="zhishu_img" data-options="http://resources.deepdraw.cn/img/templates/pscqk_847/x23.png;http://resources.deepdraw.cn/img/templates/pscqk_847/x24.png;http://resources.deepdraw.cn/img/templates/pscqk_847/x25.png;http://resources.deepdraw.cn/img/templates/pscqk_847/x26.png;">
+								<tr>
+									<td colspan="4">
+										<label class="_t" data-element="{'selector':'fieldValues[field.is(BUSINESS_TYPE, DXZS)=true]'}" data-command="[{'scope':'PRODUCT_FIELD','command':'GET_OPTION_INDEX'},{'scope':'COMMON','command':'OPTION_MAPPING','parameters':{'options':{'0':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x23.png />','1':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x24.png />','2':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x25.png />','3':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x26.png />'}}}]"></label>
+									</td>
+								</tr>
+								<tr>
+									<td><span data-type="text">None</span></td>
+									<td><span data-type="text">Smidgen</span></td>
+									<td><span data-type="text">Moderate</span></td>
+									<td><span data-type="text">Fully</span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="zhishu fs0 _eo dib" style="margin-top: 20px;">
+						<div class="dib vat" style="width:105px;text-align:right;">
+							<span data-type="text" class="ff_syr" style="font-size: 21px;color: #231815;line-height: 1;">Thickness:</span>
+						</div>
+						<div class="dib vat" style="margin: 10px 0 0 10px;">
+							<table cellpadding="0" cellspacing="0" border="0" data-zhishu-type="zhishu_img" data-options="http://resources.deepdraw.cn/img/templates/pscqk_847/x23.png;http://resources.deepdraw.cn/img/templates/pscqk_847/x24.png;http://resources.deepdraw.cn/img/templates/pscqk_847/x25.png;http://resources.deepdraw.cn/img/templates/pscqk_847/x26.png;">
+								<tr>
+									<td colspan="4">
+										<label class="_t" data-element="{'selector':'fieldValues[field.is(BUSINESS_TYPE, HDZS)=true]'}" data-command="[{'scope':'PRODUCT_FIELD','command':'GET_OPTION_INDEX'},{'scope':'COMMON','command':'OPTION_MAPPING','parameters':{'options':{'0':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x23.png />','1':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x24.png />','2':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x25.png />','3':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x26.png />'}}}]"></label>
+									</td>
+								</tr>
+								<tr>
+									<td><span data-type="text">Thickness</span></td>
+									<td><span data-type="text">Moderate</span></td>
+									<td><span data-type="text">Smidgen</span></td>
+									<td><span data-type="text">Thin</span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="zhishu fs0 _eo dib" style="margin-top: 20px;">
+						<div class="dib vat" style="width:105px;text-align:right;">
+							<span data-type="text" class="ff_syr" style="font-size: 21px;color: #231815;line-height: 1;">Size:</span>
+						</div>
+						<div class="dib vat" style="margin: 10px 0 0 10px;">
+							<table cellpadding="0" cellspacing="0" border="0" data-zhishu-type="zhishu_img" data-options="http://resources.deepdraw.cn/img/templates/pscqk_847/x23.png;http://resources.deepdraw.cn/img/templates/pscqk_847/x24.png;http://resources.deepdraw.cn/img/templates/pscqk_847/x25.png;http://resources.deepdraw.cn/img/templates/pscqk_847/x26.png;">
+								<tr>
+									<td colspan="4">
+										<label class="_t" data-element="{'selector':'fieldValues[field.is(BUSINESS_TYPE, BXZS)=true]'}" data-command="[{'scope':'PRODUCT_FIELD','command':'GET_OPTION_INDEX'},{'scope':'COMMON','command':'OPTION_MAPPING','parameters':{'options':{'0':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x23.png />','1':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x24.png />','2':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x25.png />','3':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x26.png />'}}}]"></label>
+									</td>
+								</tr>
+								<tr>
+									<td><span data-type="text">Slim</span></td>
+									<td><span data-type="text">Moderate</span></td>
+									<td><span data-type="text">Loose</span></td>
+									<td><span data-type="text">Moderate</span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="zhishu fs0 _eo dib" style="margin-top: 20px;">
+						<div class="dib vat" style="width:105px;text-align:right;">
+							<span data-type="text" class="ff_syr" style="font-size: 21px;color: #231815;line-height: 1;">Length:</span>
+						</div>
+						<div class="dib vat" style="margin: 10px 0 0 10px;">
+							<table cellpadding="0" cellspacing="0" border="0" data-zhishu-type="zhishu_img" data-options="http://resources.deepdraw.cn/img/templates/pscqk_847/x23.png;http://resources.deepdraw.cn/img/templates/pscqk_847/x24.png;http://resources.deepdraw.cn/img/templates/pscqk_847/x25.png;http://resources.deepdraw.cn/img/templates/pscqk_847/x26.png;">
+								<tr>
+									<td colspan="4">
+										<label class="_t" data-element="{'selector':'fieldValues[field.is(BUSINESS_TYPE, CDZS)=true]'}" data-command="[{'scope':'PRODUCT_FIELD','command':'GET_OPTION_INDEX'},{'scope':'COMMON','command':'OPTION_MAPPING','parameters':{'options':{'0':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x23.png />','1':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x24.png />','2':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x25.png />','3':'<img src=http://resources.deepdraw.cn/img/templates/pscqk_847/x26.png />'}}}]"></label>
+									</td>
+								</tr>
+								<tr>
+									<td><span data-type="text">Short</span></td>
+									<td><span data-type="text">Moderate</span></td>
+									<td><span data-type="text">Md-long</span></td>
+									<td><span data-type="text">Long</span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--尺寸及试穿-->
+	<!--模特效果图-->
+	<div data-title="模特效果图" class="allstyle _eo" data-space="model0">
+		<div class="screenshot">
+			<div style="margin-top:90px;">
+				<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x66.png" />
+			</div>
+			<div class="_eo" style="margin-top: 40px;">
+				<#if root.trade.name?contains("套装") || root.trade.name?contains("连衣裙")>
+					<img data-type="image" id="modelImg1" />
+					<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'right\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'910-1110','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'1010'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg1','attrs':{'src':'path'}}}]"></label>
+				<#else>
+					<img data-type="image" id="modelImg1_1" />
+					<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'lower\')','match(\'body_part\',\'upper\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'right\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'910-1110','maxCut':'0.28,0,0.28,0','upper':',pelvis-15:thorax','lower':'knee-25:pelvis,'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'1010'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg1_1','attrs':{'src':'path'}}}]"></label>
+				</#if>
+			</div>
+		</div>
+		<div class="screenshot _eo">
+			<div style="margin-top: 35px;">
+				<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x31.png" />
+			</div>
+			<div class="fl" style="margin-top: 40px;">
+				<img data-type="image" id="modelImg2" />
+				<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'910-1110','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'1010'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg2','attrs':{'src':'path'}}}]"></label>
+			</div>
+			<div class="fl" style="margin: 40px 0 0 -750px;">
+				<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x54.png" />
+			</div>
+			<div class="fl" style="margin: -200px 0 0 590px;">
+				<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x32.png" />
+			</div>
+		</div>
+		<div class="screenshot _eo fs0">
+			<div class="dib vat">
+				<div class="_eo _oa" style="margin-top: 60px;">
+					<#if root.trade.name?contains("套装") || root.trade.name?contains("连衣裙")>
+						<img data-type="image" id="modelImg3" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['whRatio()>1',''],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':570,'height':'420','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':570,'height':'420'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg3','attrs':{'src':'path'}}}]"></label>
+					<#else>
+						<img data-type="image" id="modelImg3_1" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['whRatio()>1',''],['match(\'body_part\',\'lower\')','match(\'body_part\',\'upper\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':570,'height':'420','maxCut':'0.28,0,0.28,0','upper':',pelvis-15:thorax','lower':'pelvis,'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':570,'height':'420'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg3_1','attrs':{'src':'path'}}}]"></label>
+					</#if>
+				</div>
+				<div style="margin: 35px 0 0 20px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x34.png" />
+				</div>
+			</div>
+			<div class="dib vat" style="margin: 375px 0 0 20px;width: 160px;">
+				<div class="fl _eo _oa">
+					<img data-type="image" id="ycImg1" />
+					<label class="_t" data-target="pictures" data-element="{'selector':[['isReserved(\'c\')','is(\'DETAIL\')'],['match(\'color\',\'%{color0}\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':'160','height':'215','by':'SHORT_SIDE'}},{'scope':'PRODUCT_IMAGE','command':'CUT','parameters':{'shape':'RECTANGLE','width':'160','height':'215'}},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#ycImg1','attrs':{'src':'path'}}}]"></label>
+				</div>
+				<div class="fl" style="margin: -345px 0 0 27px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x33.png" />
+				</div>
+			</div>
+		</div>
+		<div class="screenshot _eo">
+			<div class="fl" style="margin-top: 75px;">
+				<img data-type="image" id="modelImg4" />
+				<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'right\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'910-1110','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'1010'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg4','attrs':{'src':'path'}}}]"></label>
+			</div>
+			<div class="fl" style="margin: 140px 0 0 -720px;">
+				<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x35.png" />
+			</div>
+		</div>
+		<div class="screenshot _eo fs0">
+			<div class="dib vat" style="margin-top: 105px;">
+				<div style="margin-left: 8px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x36.png" />
+				</div>
+				<div class="_eo _oa" style="margin-left: 24px;">
+					<#if root.trade.name?contains("套装") || root.trade.name?contains("连衣裙")>
+						<img data-type="image" id="modelImg5" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'back\')',''],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'left\')',''],['match(\'face_orientation\',\'left\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':415,'height':'625','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':415,'height':'625'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg5','attrs':{'src':'path'}}}]"></label>
+					<#else>
+						<img data-type="image" id="modelImg5_1" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'back\')',''],['match(\'body_part\',\'lower\')','match(\'body_part\',\'upper\')',''],['match(\'body_orientation2\',\'left\')',''],['match(\'face_orientation\',\'left\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':415,'height':'625','maxCut':'0.28,0,0.28,0','upper':',pelvis-15:thorax','lower':'pelvis,'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':415,'height':'625'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg5_1','attrs':{'src':'path'}}}]"></label>
+					</#if>
+				</div>
+				<div style="margin-left: 8px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x37.png" />
+				</div>
+				<div style="margin: 45px 0 0 110px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x39.png" />
+				</div>
+			</div>
+			<div class="dib vat" style="margin: 105px 0 0 35px;">
+				<div class="_eo _oa">
+					<img data-type="image" id="ycImg2" />
+					<label class="_t" data-target="pictures" data-element="{'selector':['isReserved(\'c\')&&match(\'color\',\'%{color0}\')','@LAST'],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':'900'}},{'scope':'PRODUCT_IMAGE','command':'CUT','parameters':{'shape':'RECTANGLE','width':'260','height':'395'}},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#ycImg2','attrs':{'src':'path'}}}]"></label>
+				</div>
+				<div style="margin-top: 55px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x38.png" />
+				</div>
+				<div class="_eo" style="margin-top: 15px;">
+					<img data-type="image" id="ycImg3" />
+					<label class="_t" data-target="pictures" data-element="{'selector':[['isReserved(\'c\')','is(\'DETAIL\')'],['match(\'color\',\'%{color0}\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':'260','height':'375','by':'SHORT_SIDE'}},{'scope':'PRODUCT_IMAGE','command':'CUT','parameters':{'shape':'RECTANGLE','width':'260','height':'375'}},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#ycImg3','attrs':{'src':'path'}}}]"></label>
+				</div>
+			</div>
+		</div>
+		<div class="screenshot _eo">
+			<div style="margin-top: 100px;">
+				<#if root.trade.name?contains("套装") || root.trade.name?contains("连衣裙")>
+					<img data-type="image" id="modelImg6" />
+					<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['whRatio()>1',''],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'540','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'540'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg6','attrs':{'src':'path'}}}]"></label>
+				<#else>
+					<img data-type="image" id="modelImg6_1" />
+					<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['whRatio()>1',''],['match(\'body_part\',\'lower\')','match(\'body_part\',\'upper\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'540','maxCut':'0.28,0,0.28,0','upper':',pelvis-15:thorax','lower':'pelvis,'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'540'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg6_1','attrs':{'src':'path'}}}]"></label>
+				</#if>
+			</div>
+		</div>
+		<div class="screenshot _eo">
+			<div style="margin-top: 40px;">
+				<img data-type="image" id="modelImg7" />
+				<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'left\')',''],['match(\'face_orientation\',\'left\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'830-1030','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'930'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg7','attrs':{'src':'path'}}}]"></label>
+			</div>
+		</div>
+		<div class="screenshot _eo fs0">
+			<div class="dib vat _eo _oa" style="margin-top: 40px;">
+				<#if root.trade.name?contains("套装") || root.trade.name?contains("连衣裙")>
+					<img data-type="image" id="modelImg8" />
+					<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'back\')',''],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'right\')',''],['match(\'face_orientation\',\'right\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':370,'height':'525','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':370,'height':'525'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg8','attrs':{'src':'path'}}}]"></label>
+				<#else>
+					<img data-type="image" id="modelImg8_1" />
+					<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'back\')',''],['match(\'body_part\',\'lower\')','match(\'body_part\',\'upper\')',''],['match(\'body_orientation2\',\'right\')',''],['match(\'face_orientation\',\'right\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':370,'height':'525','maxCut':'0.28,0,0.28,0','upper':',pelvis-15:thorax','lower':'pelvis,'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':370,'height':'625'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg8_1','attrs':{'src':'path'}}}]"></label>
+				</#if>
+			</div>
+			<div class="dib vat _eo _oa" style="margin: 100px 0 0 15px;">
+				<img data-type="image" id="modelImg9" />
+				<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':365,'height':'525','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':365,'height':'525'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg9','attrs':{'src':'path'}}}]"></label>
+			</div>
+		</div>
+		<!-- 主色 -->
+		<!-- 副1色 -->
+		<#list colors[1..] as color>
+			<div class="screenshot _eo">
+				<div style="margin-top: 55px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x31.png" />
+				</div>
+				<div style="margin-top: 50px;">
+					<#if root.trade.name?contains("套装") || root.trade.name?contains("连衣裙")>
+						<img data-type="image" id="modelImg10_#{color_index}" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'#{color}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'910-1110','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'1010'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg10_#{color_index}','attrs':{'src':'path'}}}]"></label>
+					<#else>
+						<img data-type="image" id="modelImg10_1_#{color_index}" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'#{color}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'lower\')','match(\'body_part\',\'upper\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'910-1110','maxCut':'0.28,0,0.28,0','upper':',pelvis-15:thorax','lower':'knee-25:pelvis,'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'1010'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg10_1_#{color_index}','attrs':{'src':'path'}}}]"></label>
+					</#if>
+				</div>
+			</div>
+			<div class="screenshot _eo">
+				<div style="margin-top: 45px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x40.png" />
+				</div>
+				<div class="fl" style="margin-top: 55px;">
+					<img data-type="image" id="modelImg11_#{color_index}" />
+					<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'#{color}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'right\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'830-1030','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'930'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg11_#{color_index}','attrs':{'src':'path'}}}]"></label>
+				</div>
+				<div class="fl" style="margin: 23px 0 0 -225px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x41.png" />
+				</div>
+				<div class="fl" style="margin: -285px 0 0 35px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x42.png" />
+				</div>
+			</div>
+			<div class="screenshot _eo fs0">
+				<div class="dib vat">
+					<div class="_eo _oa" style="margin-top: 85px;">
+						<#if root.trade.name?contains("套装") || root.trade.name?contains("连衣裙")>
+							<img data-type="image" id="modelImg12_#{color_index}" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'#{color}\')'],['match(\'body_orientation\',\'front\')'],['whRatio()>1',''],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':570,'height':'420','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':570,'height':'420'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg12_#{color_index}','attrs':{'src':'path'}}}]"></label>
+						<#else>
+							<img data-type="image" id="modelImg12_1_#{color_index}" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'#{color}\')'],['match(\'body_orientation\',\'front\')'],['whRatio()>1',''],['match(\'body_part\',\'lower\')','match(\'body_part\',\'upper\')',''],['match(\'body_orientation2\',\'centre\')',''],['match(\'face_orientation\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':570,'height':'420','maxCut':'0.28,0,0.28,0','upper':',pelvis-15:thorax','lower':'pelvis,'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':570,'height':'420'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg12_1_#{color_index}','attrs':{'src':'path'}}}]"></label>
+						</#if>
+					</div>
+					<div style="margin: 35px 0 0 20px;">
+						<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x34.png" />
+					</div>
+				</div>
+				<div class="dib vat" style="margin: 400px 0 0 20px;width: 160px;">
+					<div class="fl _eo _oa">
+						<img data-type="image" id="ycImg4_#{color_index}" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['isReserved(\'c\')','is(\'DETAIL\')'],['match(\'color\',\'#{color}\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':'160','height':'215','by':'SHORT_SIDE'}},{'scope':'PRODUCT_IMAGE','command':'CUT','parameters':{'shape':'RECTANGLE','width':'160','height':'215'}},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#ycImg4_#{color_index}','attrs':{'src':'path'}}}]"></label>
+					</div>
+					<div class="fl" style="margin: -345px 0 0 27px;">
+						<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x33.png" />
+					</div>
+				</div>
+			</div>
+			<div class="screenshot _eo">
+				<div class="fl" style="margin-top: 75px;">
+					<#if root.trade.name?contains("套装") || root.trade.name?contains("连衣裙")>
+						<img data-type="image" id="modelImg13_#{color_index}" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'#{color}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'right\')',''],['match(\'face_orientation\',\'right\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'910-1110','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'1010'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg13_#{color_index}','attrs':{'src':'path'}}}]"></label>
+					<#else>
+						<img data-type="image" id="modelImg13_1_#{color_index}" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'#{color}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'lower\')','match(\'body_part\',\'upper\')',''],['match(\'body_orientation2\',\'right\')',''],['match(\'face_orientation\',\'right\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'910-1110','maxCut':'0.28,0,0.28,0','upper':',pelvis-15:thorax','lower':'knee-25:pelvis,'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'1010'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg13_1_#{color_index}','attrs':{'src':'path'}}}]"></label>
+					</#if>
+				</div>
+				<div class="fl" style="margin: -225px 0 0 45px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x43.png" />
+				</div>
+			</div>
+			<div class="screenshot _eo">
+				<div style="margin-top: 65px;">
+					<img data-type="image" id="modelImg14_#{color_index}" />
+					<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'#{color}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'left\')',''],['match(\'face_orientation\',\'left\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'830-1030','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':750,'height':'930'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg14_#{color_index}','attrs':{'src':'path'}}}]"></label>
+				</div>
+			</div>
+			<div class="screenshot _eo fs0">
+				<div class="dib vat _eo _oa" style="margin-top: 70px;">
+					<#if root.trade.name?contains("套装") || root.trade.name?contains("连衣裙")>
+						<img data-type="image" id="modelImg15_#{color_index}" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'#{color}\')'],['match(\'body_orientation\',\'back\')',''],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'left\')',''],['match(\'face_orientation\',\'left\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':368,'height':'525','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':368,'height':'525'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg15_#{color_index}','attrs':{'src':'path'}}}]"></label>
+					<#else>
+						<img data-type="image" id="modelImg15_1_#{color_index}" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'#{color}\')'],['match(\'body_orientation\',\'back\')',''],['match(\'body_part\',\'lower\')','match(\'body_part\',\'upper\')',''],['match(\'body_orientation2\',\'left\')',''],['match(\'face_orientation\',\'left\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':368,'height':'525','maxCut':'0.28,0,0.28,0','upper':',pelvis-15:thorax','lower':'pelvis,'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':368,'height':'625'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg15_1_#{color_index}','attrs':{'src':'path'}}}]"></label>
+					</#if>
+				</div>
+				<div class="dib vat" style="margin: 70px 0 0 15px;">
+					<div style="margin-top: 35px;">
+						<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x38.png" />
+					</div>
+					<div class="_eo _oa" style="margin-top: 15px;">
+						<#if root.trade.name?contains("套装") || root.trade.name?contains("连衣裙")>
+							<img data-type="image" id="modelImg16_#{color_index}" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'#{color}\')'],['match(\'body_orientation\',\'front\')',''],['match(\'body_part\',\'whole\')',''],['match(\'body_orientation2\',\'left\')',''],['match(\'face_orientation\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':367,'height':'525','maxCut':'0,0,0,0'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':367,'height':'525'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg16_#{color_index}','attrs':{'src':'path'}}}]"></label>
+						<#else>
+							<img data-type="image" id="modelImg16_1_#{color_index}" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'MODEL\')'],['match(\'color\',\'#{color}\')'],['match(\'body_orientation\',\'front\')',''],['match(\'body_part\',\'lower\')','match(\'body_part\',\'upper\')',''],['match(\'body_orientation2\',\'left\')',''],['match(\'face_orientation\',\'centre\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':367,'height':'525','maxCut':'0.28,0,0.28,0','upper':',pelvis-15:thorax','lower':'pelvis,'},'backups':[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':367,'height':'625'}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#modelImg16_1_#{color_index}','attrs':{'src':'path'}}}]"></label>
+						</#if>
+					</div>
+				</div>
+			</div>
+		</#list>
+		<!-- 副1色 -->
+	</div>
+	<!--模特效果图-->
+	<!--细节图-->
+	<div data-title="细节图" class="allstyle _eo">
+		<!-- 静物区域 -->
+		<div class="_eo">
+			<div class="screenshot">
+				<div style="margin-top: 130px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x67.png" />
+				</div>
+				<!-- 主色静物 -->
+				<label class="_t" data-element="{'selector':'pictures.?[is(\'STILL_LIFE\')]'}" data-command="[{'scope':'PRODUCT_IMAGE','command':'GLOBAL_PROGRAMMING','parameters':{'method':'UNIFY_HEIGHT','width':355,'margin':'20,-1,20,-1'}}]"></label>
+				<div class="_eo fs0 tac" style="margin-top: 40px;">
+					<div class="dib vat _eo _oa" style="margin: 0 10px;">
+						<div style="margin-left: 50px;">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x68.png" />
+						</div>
+						<div style="margin-top: 20px;">
+							<img data-type="image" id="gpImg1" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'STILL_LIFE\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'upper\')','match(\'body_part\',\'lower\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':355,'height':'${height}','maxCut':'0,0,0,0','extendable':'true'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':355}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#gpImg1','attrs':{'src':'path'}}}]"></label>
+						</div>
+					</div>
+					<div class="dib vat _eo _oa" style="margin: 0 10px;">
+						<div style="margin-left: 190px;">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x69.png" />
+						</div>
+						<div style="margin-top: 20px;">
+							<img data-type="image" id="gpImg2" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'STILL_LIFE\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'back\')'],['match(\'body_part\',\'upper\')','match(\'body_part\',\'lower\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':355,'height':'${height}','maxCut':'0,0,0,0','extendable':'true'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':355}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#gpImg2','attrs':{'src':'path'}}}]"></label>
+						</div>
+					</div>
+					<div style="margin: 20px 0 0 65px;text-align: left;">
+						<div class="dib vam">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x48.png" />
+						</div>
+						<div class="dib vam" style="margin-left: 5px;width: 140px;">
+							<span data-type="text" class="ffpfz" style="color: #132042;font-size: 12px;letter-spacing: 2px;line-height: 1;"><label class="_t" data-element="{'selector':'@LAST.featureValue(\'color\')'}"></label></span>
+						</div>
+					</div>
+				</div>
+				<#if root.trade.name?contains("套装")>
+				<div class="_eo fs0 tac" style="margin-top: 90px;">
+					<div class="dib vat _eo _oa" style="margin: 0 10px;">
+						<div style="margin-left: 50px;">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x68.png" />
+						</div>
+						<div style="margin-top: 20px;">
+							<img data-type="image" id="gpImg1_1" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'STILL_LIFE\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'front\')'],['match(\'body_part\',\'lower\')','match(\'body_part\',\'upper\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':355,'height':'${height}','maxCut':'0,0,0,0','extendable':'true'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':355}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#gpImg1_1','attrs':{'src':'path'}}}]"></label>
+						</div>
+					</div>
+					<div class="dib vat _eo _oa" style="margin: 0 10px;">
+						<div style="margin-left: 190px;">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x69.png" />
+						</div>
+						<div style="margin-top: 20px;">
+							<img data-type="image" id="gpImg2_2" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'STILL_LIFE\')'],['match(\'color\',\'%{color0}\')'],['match(\'body_orientation\',\'back\')'],['match(\'body_part\',\'lower\')','match(\'body_part\',\'upper\')','']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':355,'height':'${height}','maxCut':'0,0,0,0','extendable':'true'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':355}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#gpImg2_2','attrs':{'src':'path'}}}]"></label>
+						</div>
+					</div>
+					<div style="margin: 20px 0 0 65px;text-align: left;">
+						<div class="dib vam">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x48.png" />
+						</div>
+						<div class="dib vam" style="margin-left: 5px;width: 140px;">
+							<span data-type="text" class="ffpfz" style="color: #132042;font-size: 12px;letter-spacing: 2px;line-height: 1;"><label class="_t" data-element="{'selector':'@LAST.featureValue(\'color\')'}"></label></span>
+						</div>
+					</div>
+				</div>
+				</#if>
+				<#if (colors?size == 2)>
+				<label class="_t" data-element="{'selector':'pictures.?[is(\'STILL_LIFE\')]'}" data-command="[{'scope':'PRODUCT_IMAGE','command':'GLOBAL_PROGRAMMING','parameters':{'method':'UNIFY_HEIGHT','width':355,'margin':'20,-1,20,-1'}}]"></label>
+				<div class="_eo fs0 tac" style="margin-top: 90px;">
+					<div class="dib vat _eo _oa" style="margin: 0 10px;">
+						<div style="margin-left: 50px;">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x68.png" />
+						</div>
+						<div style="margin-top: 20px;">
+							<img data-type="image" id="gpImg3" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'STILL_LIFE\')'],['match(\'color\',\'%{color1}\')'],['match(\'body_orientation\',\'front\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':355,'height':'${height}','maxCut':'0,0,0,0','extendable':'true'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':355}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#gpImg3','attrs':{'src':'path'}}}]"></label>
+						</div>
+					</div>
+					<div class="dib vat _eo _oa" style="margin: 0 10px;">
+						<div style="margin-left: 190px;">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x69.png" />
+						</div>
+						<div style="margin-top: 20px;">
+							<img data-type="image" id="gpImg4" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'STILL_LIFE\')'],['match(\'color\',\'%{color1}\')'],['match(\'body_orientation\',\'back\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':355,'height':'${height}','maxCut':'0,0,0,0','extendable':'true'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':355}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#gpImg4','attrs':{'src':'path'}}}]"></label>
+						</div>
+					</div>
+					<div style="margin: 20px 0 0 65px;text-align: left;">
+						<div class="dib vam">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x48.png" />
+						</div>
+						<div class="dib vam" style="margin-left: 5px;width: 140px;">
+							<span data-type="text" class="ffpfz" style="color: #132042;font-size: 12px;letter-spacing: 2px;line-height: 1;"><label class="_t" data-element="{'selector':'@LAST.featureValue(\'color\')'}"></label></span>
+						</div>
+					</div>
+				</div>
+				</#if>
+				<!-- 主色静物 -->
+				<!-- 副色静物 -->
+				<!-- 三列 -->
+				<#if (colors?size == 4)>
+				<label class="_t" data-element="{'selector':'pictures.?[is(\'STILL_LIFE\')]'}" data-command="[{'scope':'PRODUCT_IMAGE','command':'GLOBAL_PROGRAMMING','parameters':{'method':'UNIFY_HEIGHT','width':235,'margin':'20,-1,20,-1'}}]"></label>
+				<div class="_eo fs0 tac" style="margin-top: 90px;width: 765px;margin-left: -7.5px;">
+					<div class="dib vat _eo" style="margin: 0 10px;">
+						<div style="margin-left: 55px;">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x68.png" />
+						</div>
+						<div class="_eo _oa" style="margin-top: 20px;">
+							<img data-type="image" id="gpImg5" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'STILL_LIFE\')'],['match(\'color\',\'%{color1}\')'],['match(\'body_orientation\',\'front\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':235,'height':'${height}','maxCut':'0,0,0,0','extendable':'true'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':235}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#gpImg5','attrs':{'src':'path'}}}]"></label>
+						</div>
+						<div style="margin: 20px 0 0 55px;text-align: left;">
+							<div class="dib vam">
+								<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x48.png" />
+							</div>
+							<div class="dib vam" style="margin-left: 5px;width: 140px;">
+								<span data-type="text" class="ffpfz" style="color: #132042;font-size: 12px;letter-spacing: 2px;line-height: 1;"><label class="_t" data-element="{'selector':'@LAST.featureValue(\'color\')'}"></label></span>
+							</div>
+						</div>
+					</div>
+					<div class="dib vat _eo" style="margin: 0 10px;">
+						<div style="margin-left: 50px;">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x73.png" />
+						</div>
+						<div class="_eo _oa" style="margin-top: 20px;">
+							<img data-type="image" id="gpImg6" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'STILL_LIFE\')'],['match(\'color\',\'%{color2}\')'],['match(\'body_orientation\',\'front\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':235,'height':'${height}','maxCut':'0,0,0,0','extendable':'true'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':235}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#gpImg6','attrs':{'src':'path'}}}]"></label>
+						</div>
+						<div style="margin: 20px 0 0 55px;text-align: left;">
+							<div class="dib vam">
+								<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x48.png" />
+							</div>
+							<div class="dib vam" style="margin-left: 5px;width: 140px;">
+								<span data-type="text" class="ffpfz" style="color: #132042;font-size: 12px;letter-spacing: 2px;line-height: 1;"><label class="_t" data-element="{'selector':'@LAST.featureValue(\'color\')'}"></label></span>
+							</div>
+						</div>
+					</div>
+					<div class="dib vat _eo" style="margin: 0 10px;">
+						<div style="margin-left: 50px;">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x73.png" />
+						</div>
+						<div class="_eo _oa" style="margin-top: 20px;">
+							<img data-type="image" id="gpImg7" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'STILL_LIFE\')'],['match(\'color\',\'%{color3}\')'],['match(\'body_orientation\',\'front\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':235,'height':'${height}','maxCut':'0,0,0,0','extendable':'true'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':235}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#gpImg7','attrs':{'src':'path'}}}]"></label>
+						</div>
+						<div style="margin: 20px 0 0 55px;text-align: left;">
+							<div class="dib vam">
+								<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x48.png" />
+							</div>
+							<div class="dib vam" style="margin-left: 5px;width: 140px;">
+								<span data-type="text" class="ffpfz" style="color: #132042;font-size: 12px;letter-spacing: 2px;line-height: 1;"><label class="_t" data-element="{'selector':'@LAST.featureValue(\'color\')'}"></label></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				</#if>
+				<!-- 三列 -->
+				<#if (colors?size > 2) && (colors?size != 4)>
+				<!-- 两列 -->
+				<label class="_t" data-element="{'selector':'pictures.?[is(\'STILL_LIFE\')]'}" data-command="[{'scope':'PRODUCT_IMAGE','command':'GLOBAL_PROGRAMMING','parameters':{'method':'UNIFY_HEIGHT','width':355,'margin':'20,-1,20,-1'}}]"></label>
+				<div class="_eo fs0 tac" style="margin-top: 90px;">
+					<div class="dib vat _eo" style="margin: 0 10px;">
+						<div style="margin-left: 50px;">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x68.png" />
+						</div>
+						<div class="_eo _oa" style="margin-top: 20px;">
+							<img data-type="image" id="gpImg8" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'STILL_LIFE\')'],['match(\'color\',\'%{color1}\')'],['match(\'body_orientation\',\'front\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':355,'height':'${height}','maxCut':'0,0,0,0','extendable':'true'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':355}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#gpImg8','attrs':{'src':'path'}}}]"></label>
+						</div>
+						<div style="margin: 20px 0 0 55px;text-align: left;">
+							<div class="dib vam">
+								<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x48.png" />
+							</div>
+							<div class="dib vam" style="margin-left: 5px;width: 140px;">
+								<span data-type="text" class="ffpfz" style="color: #132042;font-size: 12px;letter-spacing: 2px;line-height: 1;"><label class="_t" data-element="{'selector':'@LAST.featureValue(\'color\')'}"></label></span>
+							</div>
+						</div>
+					</div>
+					<div class="dib vat _eo" style="margin: 0 10px;">
+						<div style="margin-left: 190px;">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x73.png" />
+						</div>
+						<div class="_eo _oa" style="margin-top: 20px;">
+							<img data-type="image" id="gpImg9" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'STILL_LIFE\')'],['match(\'color\',\'%{color2}\')'],['match(\'body_orientation\',\'front\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':355,'height':'${height}','maxCut':'0,0,0,0','extendable':'true'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':355}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#gpImg9','attrs':{'src':'path'}}}]"></label>
+						</div>
+						<div style="margin: 20px 0 0 55px;text-align: left;">
+							<div class="dib vam">
+								<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x48.png" />
+							</div>
+							<div class="dib vam" style="margin-left: 5px;width: 140px;">
+								<span data-type="text" class="ffpfz" style="color: #132042;font-size: 12px;letter-spacing: 2px;line-height: 1;"><label class="_t" data-element="{'selector':'@LAST.featureValue(\'color\')'}"></label></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 两列 -->
+				</#if>
+				<!-- 副色静物 -->
+			</div>
+			<div class="screenshot _eo">
+				<#if (colors?size > 4)>
+				<!-- 两列 -->
+				<label class="_t" data-element="{'selector':'pictures.?[is(\'STILL_LIFE\')]'}" data-command="[{'scope':'PRODUCT_IMAGE','command':'GLOBAL_PROGRAMMING','parameters':{'method':'UNIFY_HEIGHT','width':355,'margin':'20,-1,20,-1'}}]"></label>
+				<div class="_eo fs0 tac" style="margin-top: 90px;">
+					<div class="dib vat _eo" style="margin: 0 10px;">
+						<div style="margin-left: 50px;">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x68.png" />
+						</div>
+						<div class="_eo _oa" style="margin-top: 20px;">
+							<img data-type="image" id="gpImg10" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'STILL_LIFE\')'],['match(\'color\',\'%{color3}\')'],['match(\'body_orientation\',\'front\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':355,'height':'${height}','maxCut':'0,0,0,0','extendable':'true'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':355}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#gpImg10','attrs':{'src':'path'}}}]"></label>
+						</div>
+						<div style="margin: 20px 0 0 55px;text-align: left;">
+							<div class="dib vam">
+								<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x48.png" />
+							</div>
+							<div class="dib vam" style="margin-left: 5px;width: 140px;">
+								<span data-type="text" class="ffpfz" style="color: #132042;font-size: 12px;letter-spacing: 2px;line-height: 1;"><label class="_t" data-element="{'selector':'@LAST.featureValue(\'color\')'}"></label></span>
+							</div>
+						</div>
+					</div>
+					<div class="dib vat _eo" style="margin: 0 10px;">
+						<div style="margin-left: 190px;">
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x73.png" />
+						</div>
+						<div class="_eo _oa" style="margin-top: 20px;">
+							<img data-type="image" id="gpImg11" />
+							<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'STILL_LIFE\')'],['match(\'color\',\'%{color4}\')'],['match(\'body_orientation\',\'front\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'SMART_CHOP','parameters':{'margin':'20,-1,20,-1','width':355,'height':'${height}','maxCut':'0,0,0,0','extendable':'true'},'backups':[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':355}}]},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#gpImg11','attrs':{'src':'path'}}}]"></label>
+						</div>
+						<div style="margin: 20px 0 0 55px;text-align: left;">
+							<div class="dib vam">
+								<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x48.png" />
+							</div>
+							<div class="dib vam" style="margin-left: 5px;width: 140px;">
+								<span data-type="text" class="ffpfz" style="color: #132042;font-size: 12px;letter-spacing: 2px;line-height: 1;"><label class="_t" data-element="{'selector':'@LAST.featureValue(\'color\')'}"></label></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 两列 -->
+				</#if>
+			</div>
+		</div>
+		<!-- 静物区域 -->
+		<!-- 细节区域 -->
+		<div class="_eo" data-space="detail1">
+			<div class="screenshot _eo">
+				<!-- 判断面料细节有无加标题 -->
+				<div style="margin-top: 55px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x71.png" />
+				</div>
+				<!-- 面料 -->
+				<div class="_eo">
+					<div class="_eo _oa" style="margin-top: 55px;">
+						<img data-type="image" id="fabricImg1" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'FABRIC\')'],['match(\'color\',\'%{color0}\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':'750','height':'485','by':'SHORT_SIDE'}},{'scope':'PRODUCT_IMAGE','command':'CUT','parameters':{'shape':'RECTANGLE','width':'750','height':'485'}},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#fabricImg1','attrs':{'src':'path'}}}]"></label>
+					</div>
+				</div>
+				<!-- 面料 -->
+			</div>
+			<!-- 主色细节 -->
+			<div class="screenshot _eo">
+				<#if (pictureCount('FABRIC', color0) = 0)>
+				<div style="margin-top: 55px;">
+					<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x49.png" />
+				</div>
+				</#if>
+				<div class="_eo" style="margin-top: 40px;">
+					<div class="_eo _oa">
+						<img data-type="image" id="detailImg3" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'DETAIL\')'],['match(\'color\',\'%{color0}\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':'750','height':'455','by':'SHORT_SIDE'}},{'scope':'PRODUCT_IMAGE','command':'CUT','parameters':{'shape':'RECTANGLE','width':'750','height':'455'}},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#detailImg3','attrs':{'src':'path'}}}]"></label>
+					</div>
+					<div class="ofh" style="height: 60px;">
+						<div class="_eo fs0" style="margin: 25px 0 0 60px;">
+							<div class="dib vat">
+								<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x58.png" />
+							</div>
+							<div class="dib vat tac ofh _eo _oa" style="width: 100px;background-color: #f3ede7;height: 24px;margin: 10px 0 0 20px;">
+								<span data-type="text" class="dib" style="font-family: '方正兰亭中黑简体';font-size: 20px;color: #000;line-height: 24px;margin-top: 1px;"><label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT_IMAGE','command':'GET_FILE_NAME'},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'\\.'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'1'}},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'-'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'0'}},{'scope':'COMMON','command':'NL2BR'},{'scope':'COMMON','command':'DEFAULT_VALUE','parameters':{'value':''}}]"></label></span>
+							</div>
+							<div class="dib vat _eo _oa" style="margin: 14px 0 0 10px;width: 530px;">
+								<span data-type="text" style="font-family: 'Noto Sans S Chinese';font-size: 18px;color: #585758;"><label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT_IMAGE','command':'GET_FILE_NAME'},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'\\.'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'1'}},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'-'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'1'}},{'scope':'COMMON','command':'NL2BR'},{'scope':'COMMON','command':'DEFAULT_VALUE','parameters':{'value':''}}]"></label></span>
+							</div>
+						</div>
+						<div>
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x72.png" />
+						</div>
+					</div>
+				</div>
+				<div class="_eo" style="margin-top: 30px;">
+					<div class="_eo _oa">
+						<img data-type="image" id="detailImg4" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'DETAIL\')'],['match(\'color\',\'%{color0}\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':'750','height':'455','by':'SHORT_SIDE'}},{'scope':'PRODUCT_IMAGE','command':'CUT','parameters':{'shape':'RECTANGLE','width':'750','height':'455'}},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#detailImg4','attrs':{'src':'path'}}}]"></label>
+					</div>
+					<div class="ofh" style="height: 60px;">
+						<div class="_eo fs0" style="margin: 25px 0 0 60px;">
+							<div class="dib vat">
+								<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x58.png" />
+							</div>
+							<div class="dib vat tac ofh _eo _oa" style="width: 100px;background-color: #f3ede7;height: 24px;margin: 10px 0 0 20px;">
+								<span data-type="text" class="dib" style="font-family: '方正兰亭中黑简体';font-size: 20px;color: #000;line-height: 24px;margin-top: 1px;"><label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT_IMAGE','command':'GET_FILE_NAME'},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'\\.'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'1'}},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'-'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'0'}},{'scope':'COMMON','command':'NL2BR'},{'scope':'COMMON','command':'DEFAULT_VALUE','parameters':{'value':''}}]"></label></span>
+							</div>
+							<div class="dib vat _eo _oa" style="margin: 14px 0 0 10px;width: 530px;">
+								<span data-type="text" style="font-family: 'Noto Sans S Chinese';font-size: 18px;color: #585758;"><label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT_IMAGE','command':'GET_FILE_NAME'},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'\\.'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'1'}},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'-'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'1'}},{'scope':'COMMON','command':'NL2BR'},{'scope':'COMMON','command':'DEFAULT_VALUE','parameters':{'value':''}}]"></label></span>
+							</div>
+						</div>
+						<div>
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x72.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="screenshot _eo">
+				<div class="_eo" style="margin-top: 30px;">
+					<div class="_eo _oa">
+						<img data-type="image" id="detailImg5" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'DETAIL\')'],['match(\'color\',\'%{color0}\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':'750','height':'455','by':'SHORT_SIDE'}},{'scope':'PRODUCT_IMAGE','command':'CUT','parameters':{'shape':'RECTANGLE','width':'750','height':'455'}},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#detailImg5','attrs':{'src':'path'}}}]"></label>
+					</div>
+					<div class="ofh" style="height: 60px;">
+						<div class="_eo fs0" style="margin: 25px 0 0 60px;">
+							<div class="dib vat">
+								<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x58.png" />
+							</div>
+							<div class="dib vat tac ofh _eo _oa" style="width: 100px;background-color: #f3ede7;height: 24px;margin: 10px 0 0 20px;">
+								<span data-type="text" class="dib" style="font-family: '方正兰亭中黑简体';font-size: 20px;color: #000;line-height: 24px;margin-top: 1px;"><label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT_IMAGE','command':'GET_FILE_NAME'},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'\\.'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'1'}},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'-'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'0'}},{'scope':'COMMON','command':'NL2BR'},{'scope':'COMMON','command':'DEFAULT_VALUE','parameters':{'value':''}}]"></label></span>
+							</div>
+							<div class="dib vat _eo _oa" style="margin: 14px 0 0 10px;width: 530px;">
+								<span data-type="text" style="font-family: 'Noto Sans S Chinese';font-size: 18px;color: #585758;"><label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT_IMAGE','command':'GET_FILE_NAME'},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'\\.'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'1'}},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'-'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'1'}},{'scope':'COMMON','command':'NL2BR'},{'scope':'COMMON','command':'DEFAULT_VALUE','parameters':{'value':''}}]"></label></span>
+							</div>
+						</div>
+						<div>
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x72.png" />
+						</div>
+					</div>
+				</div>
+				<div class="_eo" style="margin-top: 30px;">
+					<div class="_eo _oa">
+						<img data-type="image" id="detailImg6" />
+						<label class="_t" data-target="pictures" data-element="{'selector':[['is(\'DETAIL\')'],['match(\'color\',\'%{color0}\')']],'count':1}" data-command="[{'scope':'PRODUCT_IMAGE','command':'RESIZE','parameters':{'width':'750','height':'455','by':'SHORT_SIDE'}},{'scope':'PRODUCT_IMAGE','command':'CUT','parameters':{'shape':'RECTANGLE','width':'750','height':'455'}},{'scope':'PRODUCT_IMAGE','command':'APPLY_TO','parameters':{'selector':'#detailImg6','attrs':{'src':'path'}}}]"></label>
+					</div>
+					<div class="ofh" style="height: 60px;">
+						<div class="_eo fs0" style="margin: 25px 0 0 60px;">
+							<div class="dib vat">
+								<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x58.png" />
+							</div>
+							<div class="dib vat tac ofh _eo _oa" style="width: 100px;background-color: #f3ede7;height: 24px;margin: 10px 0 0 20px;">
+								<span data-type="text" class="dib" style="font-family: '方正兰亭中黑简体';font-size: 20px;color: #000;line-height: 24px;margin-top: 1px;"><label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT_IMAGE','command':'GET_FILE_NAME'},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'\\.'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'1'}},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'-'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'0'}},{'scope':'COMMON','command':'NL2BR'},{'scope':'COMMON','command':'DEFAULT_VALUE','parameters':{'value':''}}]"></label></span>
+							</div>
+							<div class="dib vat _eo _oa" style="margin: 14px 0 0 10px;width: 530px;">
+								<span data-type="text" style="font-family: 'Noto Sans S Chinese';font-size: 18px;color: #585758;"><label class="_t" data-element="{'selector':'@LAST'}" data-command="[{'scope':'PRODUCT_IMAGE','command':'GET_FILE_NAME'},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'\\.'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'1'}},{'scope':'COMMON','command':'SPLIT','parameters':{'splitter':'-'}},{'scope':'COMMON','command':'INDEX','parameters':{'index':'1'}},{'scope':'COMMON','command':'NL2BR'},{'scope':'COMMON','command':'DEFAULT_VALUE','parameters':{'value':''}}]"></label></span>
+							</div>
+						</div>
+						<div>
+							<img data-type="image" src="http://resources.deepdraw.cn/img/templates/pscqk_847/x72.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 主色细节 -->
+		</div>
+		<!-- 细节区域 -->
+	</div>
+	<!--细节图-->
+</div>
+<script type="text/javascript" class="dynamicEvalScript">
+	import org.jsoup.nodes.Element;
+	import org.jsoup.select.Elements;
+
+	parser.select('.imgs img').attr('data-type', 'image');
+	parser.select('.imgw img').attr('width', '100%');
+</script>
+<!-- PSAA847 -->
